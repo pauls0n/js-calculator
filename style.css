@@ -1,0 +1,115 @@
+:root {
+  --primary-font: "Fredoka One", cursive;
+  --primary-color: #ff7a00;
+  --primary-color-light: #fff2e5;
+  --secondary-color: #000000;
+  --tertiary-color: #ffffff;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-family: var(--primary-font);
+  background-color: var(--primary-color-light);
+  min-height: 100vh;
+}
+
+h1 {
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 3.6rem;
+  text-align: center;
+}
+
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--primary-color-light);
+  border: 10px solid var(--secondary-color);
+  border-radius: 10px;
+  padding: 3rem;
+  min-width: 25vw;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right;
+  background-color: var(--secondary-color);
+  width: 100%;
+  padding: 2rem;
+  font-weight: 400;
+}
+
+.user-input {
+  font-size: 2rem;
+  color: var(--tertiary-color);
+}
+
+.result {
+  font-size: 4.5rem;
+  color: var(--primary-color);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+button {
+  background-color: var(--tertiary-color);
+  padding: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--primary-font);
+  font-weight: 400;
+  text-align: center;
+  font-size: 2.8rem;
+  cursor: pointer;
+}
+
+.action-special-1 {
+  grid-column: 1 / span 2;
+}
+
+.action-special-2 {
+  grid-column: 3 / span 2;
+}
+
+.action {
+  color: var(--primary-color);
+}
+
+.equal-to {
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  border-radius: 500px;
+}
